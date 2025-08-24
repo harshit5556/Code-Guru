@@ -11,4 +11,5 @@ A full-stack web application that enables developers to get real-time feedback o
 - **Frontend**: React, CSS, JavaScript  
 - **Backend**: Node.js, Express.js  
 - **API Integration**: Google Gemini API  
-![Screenshot 2025-02-23 162739](https://github.com/user-attachments/assets/7f716334-20b8-45ac-8c39-bc8662bcd4cd)
+<img width="1360" height="678" alt="image" src="https://github.com/user-attachments/assets/07e0eb23-226b-4a18-9a15-c13f77ac7dc8" />
+
