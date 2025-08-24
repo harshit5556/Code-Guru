@@ -41,7 +41,7 @@ function factorial(n) {
     setReview(""); 
     try {
       const response = await axios.post(
-        "https://code-reviewer-backend-hqzb.onrender.com/ai/get-review", 
+        'https://code-reviewer-backend-hqzb.onrender.com/ai/get-review', 
         { code }
       );
       setReview(response.data);
