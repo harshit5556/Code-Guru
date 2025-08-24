@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import Editor from "react-simple-code-editor";
-import { Link } from "react-router-dom"; // Import Link for navigation
+import { Link } from "react-router-dom"; 
 import prism from "prismjs";
-import "prismjs/components/prism-jsx"; // Add any languages you need
-import "prismjs/themes/prism-tomorrow.css"; // A great dark theme for the editor
+import "prismjs/components/prism-jsx"; 
+import "prismjs/themes/prism-tomorrow.css"; 
 import Markdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
-import "highlight.js/styles/atom-one-dark.css"; // A nice theme for markdown code blocks
+import "highlight.js/styles/atom-one-dark.css"; 
 import axios from "axios";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 
-// A simple spinner component for the loading state
+
 const Spinner = () => (
   <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
@@ -21,7 +21,7 @@ const Spinner = () => (
 function Coding() {
   const [code, setCode] = useState(
 `// Welcome to Code Guru!
-// Paste your code here and click "Review Code" to get AI feedback.
+// Paste your code here and click "Review Code" to get feedback.
 
 function factorial(n) {
   if (n < 0) {
@@ -36,17 +36,12 @@ function factorial(n) {
   const [review, setReview] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // This effect can be removed as prism is now called directly in the highlight prop
-  // useEffect(() => {
-  //   prism.highlightAll();
-  // }, []);
-
   async function reviewCode() {
     setLoading(true);
-    setReview(""); // Clear previous review
+    setReview(""); 
     try {
       const response = await axios.post(
-        "http://localhost:3000/ai/get-review", // Replace with your actual API endpoint
+        "https://code-reviewer-backend-hqzb.onrender.com/ai/get-review", 
         { code }
       );
       setReview(response.data);
@@ -59,7 +54,7 @@ function factorial(n) {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-900 text-gray-200 font-sans">
-      {/* Header with Glassmorphism Effect */}
+      
       <header className="sticky top-0 z-30 bg-gray-900/70 backdrop-blur-lg border-b border-gray-700">
         <div className="container mx-auto flex items-center justify-between h-16 px-4">
           <Link to="/" className="text-2xl font-bold tracking-tight">
@@ -80,7 +75,7 @@ function factorial(n) {
         </div>
       </header>
 
-      {/* Main Content: Responsive two-panel layout */}
+    
       <main className="flex-1 flex flex-col lg:flex-row gap-4 p-4">
 
         {/* Editor Panel */}
@@ -95,7 +90,7 @@ function factorial(n) {
               onValueChange={setCode}
               highlight={(code) => prism.highlight(code, prism.languages.javascript, "javascript")}
               padding={10}
-              className="custom-scrollbar" // Apply custom scrollbar
+              className="custom-scrollbar" 
               style={{
                 fontFamily: '"Fira Code", "Consolas", monospace',
                 fontSize: 15,
