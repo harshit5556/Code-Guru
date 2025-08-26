@@ -114,7 +114,7 @@ function factorial(n) {
         {/* Review Panel */}
         <div className="flex flex-col lg:w-1/2 bg-gray-800/50 rounded-xl border border-gray-700 shadow-2xl">
           <div className="p-3 border-b border-gray-700">
-            <h2 className="text-lg font-semibold text-gray-300">AI Review</h2>
+            <h2 className="text-lg font-semibold text-gray-300">Review</h2>
           </div>
           <div className="flex-1 p-6 overflow-y-auto custom-scrollbar">
             {loading ? (
