@@ -1,3 +1,4 @@
+![Uploading Screenshot 2025-08-26 225454.png…]()
 # Code-Reviewer Web Application  
 A full-stack web application that enables developers to get real-time feedback on their code. The platform leverages Google's Gemini API to analyze code, detect issues, and suggest optimized corrections.
 
